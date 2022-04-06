@@ -1,10 +1,4 @@
 function Resultados=simpson1_3compuesto(a,b,f,n)
-syms x real;
-global sol1;
-m=0;
-
-%Solución real en el intervalo dado
-sol1=double(int(f,a,b));
 
 %Cálculo
 i=1;
