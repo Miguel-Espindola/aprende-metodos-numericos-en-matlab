@@ -1,5 +1,8 @@
 function Resultados=trapeciosimple(a,b,f)
-
+% esta funcion calcula la integral de una funcion simbolica en un intervalo
+% de a,b usando el metodo del trapecio, la respuesta es un vector de 1x3
+% donde la primer columna es la iteracion, la segunda el valor obtenido y
+% la tercera el error obtenido 
 
 
 
