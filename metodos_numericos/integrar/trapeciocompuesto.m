@@ -17,7 +17,6 @@ while i<= n
     i=i+1;
 end
 
-format long;
 contador=0:n;
 Resultados=[transpose(contador),valm,ErrorVect];
 Resultados=Resultados(1:n+1,:);

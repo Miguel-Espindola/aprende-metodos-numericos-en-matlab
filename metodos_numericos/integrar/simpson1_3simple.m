@@ -16,7 +16,5 @@ for i =1:c
 end
 Error=(derivadamaxima*(b-a)^5)/90;
 
-%Cálculo
-format long;
 Resultados=[1,I,Error];
 end            

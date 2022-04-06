@@ -1,4 +1,6 @@
 function Resultados=puntomediosimple(a,b,f)
+%esta funcion calcula la integral de una funcion en un intervalo de a,b la
+%entrada es una funcion simbolica y el intervalo en donde se desea integrar
     I=(b-a)*double(subs(f,x,(a+b)/2));
     y = a:0.01:b;
     c=numel(y);

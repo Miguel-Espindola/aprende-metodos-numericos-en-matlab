@@ -16,7 +16,6 @@ for i =1:c
 end
 Error=(3*derivadamaxima*h^5)/80;
 
-%Cálculo
-format long;
+
 Resultados=[1,I,Error];
 end            
