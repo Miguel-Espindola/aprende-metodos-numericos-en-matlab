@@ -1,1 +1,7 @@
 # List of untracked files to ignore
+*.asv
+*.mex*
+pendientes.mlx
+/resources
+pruebas_metodos_integracion.mlx
+pruebas_metodos_raices.mlx
