@@ -5,8 +5,8 @@ function Resultados=trapeciosimple(a,b,f)
 % la tercera el error obtenido 
 
 
-
-I=(b-a)*double(subs(f,x,a)+subs(f,x,b))/2;
+vars = symvar(f);
+I=(b-a)*double(subs(f,vars(1),a)+subs(f,vars(1),b))/2;
 
 %Cálculo de la cota de error
 y = a:0.01:b;
