@@ -1,8 +1,6 @@
 function Resultados=newtonraphson(m,iterMax,Tol,f)
-syms x real;
-global sol1;
-%Solución real en el intervalo dado
-sol=vpasolve(f,x);
+vars = symvar(f);
+sol=vpasolve(f,vars(1));
 c=numel(sol);
 sol1=[];
 if c==1
@@ -33,9 +31,9 @@ n=0;
 Error=Tol+1;
 valm=zeros(iterMax+1,1);
 ErrorVect=zeros(iterMax+1,1);
-derivada=double(subs(diff(f,x),x,m));
+derivada=double(subs(diff(f,vars(1)),vars(1),m));
     while n<=iterMax && Error > Tol
-        m=m-((double(subs(f,x,m)))/(double(subs(diff(f,x),x,m))));
+        m=m-((double(subs(f,vars(1),m)))/(double(subs(diff(f,vars(1)),vars(1),m))));
         valm(n+1)=m;
         if n>=1
             Error=abs(valm(n+1)-valm(n));

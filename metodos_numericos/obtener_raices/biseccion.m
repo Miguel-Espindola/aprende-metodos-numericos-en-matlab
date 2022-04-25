@@ -1,8 +1,7 @@
 function Resultados=biseccion(a,b,iterMax,Tol,f)
-    syms x real;
-    global sol1;
+    vars = symvar(f);
     %Solución real en el intervalo dado
-    sol=vpasolve(f,x);
+    sol=vpasolve(f,vars(1),a);
     sol1=[];
     j=1;
     i=1;
@@ -29,13 +28,13 @@ function Resultados=biseccion(a,b,iterMax,Tol,f)
     Error=Tol+1;
     valm=zeros(iterMax+1,1);
     ErrorVect=zeros(iterMax+1,1);
-    fa=double(subs(f,x,a));
-    fb=double(subs(f,x,b));
+    fa=double(subs(f,vars(1),a));
+    fb=double(subs(f,vars(1),b));
     
     if fa*fb<0
         while n<=iterMax && Error > Tol
             m=(a+b)/2;
-            fm=double(subs(f,x,m));
+            fm=double(subs(f,vars(1),m));
             if fa*fm<0
                 b=m;
                 fb=fm;
@@ -51,7 +50,7 @@ function Resultados=biseccion(a,b,iterMax,Tol,f)
             n=n+1;
         end
     
-        format long;
+        %format long;
         contador=0:iterMax;
         Resultados=[transpose(contador),valm,ErrorVect];
         Resultados=Resultados(1:n,:);

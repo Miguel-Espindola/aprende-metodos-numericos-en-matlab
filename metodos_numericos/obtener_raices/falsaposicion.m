@@ -1,8 +1,7 @@
 function Resultados=falsaposicion(a,b,iterMax,Tol,f)
-syms x real;
-global sol1;
 %Solución real en el intervalo dado
-sol=vpasolve(f,x);
+vars = symvar(f);
+sol=vpasolve(f,vars(1));
 sol1=[];
 j=1;
 i=1;
@@ -29,23 +28,23 @@ n=0;
 Error=Tol+1;
 valm=zeros(iterMax+1,1);
 ErrorVect=zeros(iterMax+1,1);
-fa=double(subs(f,x,a));
-fb=double(subs(f,x,b));
+fa=double(subs(f,vars(1),a));
+fb=double(subs(f,vars(1),b));
 
 if fa*fb<=0
     while n<=iterMax && Error > Tol
-        fa=double(subs(f,x,a));
-        fb=double(subs(f,x,b));
+        fa=double(subs(f,vars(1),a));
+        fb=double(subs(f,vars(1),b));
         c=(b*fa-a*fb)/(fa-fb);
-        fc=double(subs(f,x,c));
+        fc=double(subs(f,vars(1),c));
         valm(n+1)=c;
         if fa*fc<0
             b=c;
-            fb=double(subs(f,x,b));
+            fb=double(subs(f,vars(1),b));
             c=(b*fa-a*fb)/(fa-fb);
         else
             a=c;
-            fa=double(subs(f,x,c));
+            fa=double(subs(f,vars(1),c));
             c=(b*fa-a*fb)/(fa-fb);
         end
         if n>=1

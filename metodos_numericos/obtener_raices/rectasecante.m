@@ -1,8 +1,7 @@
 function Resultados=rectasecante(x_0,x_1,iterMax,Tol,f)
-syms x real;
-global sol1;
+vars = symvar(f);
 %Solución real en el intervalo dado
-sol=vpasolve(f,x);
+sol=vpasolve(f,vars(1));
 sol1=[];
 j=1;
 i=1;
@@ -29,13 +28,13 @@ n=0;
 Error=Tol+1;
 valm=zeros(iterMax+1,1);
 ErrorVect=zeros(iterMax+1,1);
-fa=double(subs(f,x,x_0));
-fb=double(subs(f,x,x_1));
+fa=double(subs(f,vars(1),x_0));
+fb=double(subs(f,vars(1),x_1));
 
 if x_0~=x_1
     while n<=iterMax && Error > Tol
-        y_0=double(subs(f,x,x_0));
-        y_1=double(subs(f,x,x_1));
+        y_0=double(subs(f,vars(1),x_0));
+        y_1=double(subs(f,vars(1),x_1));
         x_2=(x_0*y_1-y_0*x_1)/(y_1-y_0);
         x_0=x_1;
         x_1=x_2;
