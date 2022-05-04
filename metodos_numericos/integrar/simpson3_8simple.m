@@ -10,7 +10,8 @@ I=3*h*double(subs(f,vars(1),a)+subs(f,vars(1),b)+3*subs(f,vars(1),(2*a+b)/3)+3*s
 %Cálculo de la cota de error
 y = a:0.01:b;
 c=numel(y);   
-derivada=diff(f,x,2);
+derivada=diff(f,vars(1),2);
+derivadamaxima = 0;
 for i =1:c
     derivadaevaluada=abs(double(subs(derivada,y(i))));
     if derivadaevaluada >=  derivadamaxima    
