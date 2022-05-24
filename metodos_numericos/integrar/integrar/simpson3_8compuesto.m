@@ -4,7 +4,7 @@ function Resultados=simpson3_8compuesto(a,b,f,n)
 % un n numero de subintervalos usando el metodo de simpson3/8 la salida es
 % una matriz de 3xn donde la primer columna es la iteracion, la segunda el
 % valor obtenido y la tercera el error obtenido en esa iteracion
-
+m=0;
 
 %Solución real en el intervalo dado
 
@@ -14,7 +14,7 @@ i=1;
 valm=zeros(n+1,1);
 ErrorVect=zeros(n+1,1);
 h=(b-a)/n;
-m=0;
+
 while i<= n
     ant=simpson3_8simple(a+(i-1)*h,a+(i-1)*h+h,f);
     m=m+ant(2);

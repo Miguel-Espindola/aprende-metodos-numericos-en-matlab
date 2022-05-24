@@ -6,7 +6,7 @@ function Resultados=simpson1_3simple(a,b,f)
 vars = symvar(f);
 m=(a+b)/2;
 I=(b-a)*double(subs(f,vars(1),a)+subs(f,vars(1),b)+4*subs(f,vars(1),m))/6;
-derivadamaxima = 0;
+
 %Cálculo de la cota de error
 y = a:0.01:b;
 c=numel(y);   
