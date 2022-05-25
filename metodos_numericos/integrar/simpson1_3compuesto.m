@@ -8,7 +8,7 @@ i=1;
 valm=zeros(n+1,1);
 ErrorVect=zeros(n+1,1);
 h=(b-a)/n;
-
+m = 0;
 while i<= n
     ant=simpson1_3simple(a+(i-1)*h,a+(i-1)*h+h,f);
     m=m+ant(2);
