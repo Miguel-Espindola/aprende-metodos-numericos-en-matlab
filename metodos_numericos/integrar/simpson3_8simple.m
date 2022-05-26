@@ -1,8 +1,10 @@
 function Resultados=simpson3_8simple(a,b,f)
 
-% esta funcion calcula la integral de una funcion simbolica usando el
-% metodo de simpson 3/8 toma como entrada un intervalo de a,b y una funcion
+
+% esta función calcula la integral de una función simbólica usando el
+% método de Simpson 3/8 toma como entrada un intervalo de a,b y una función
 % a integrar
+
 vars = symvar(f);
 h=(b-a)/3;
 I=3*h*double(subs(f,vars(1),a)+subs(f,vars(1),b)+3*subs(f,vars(1),(2*a+b)/3)+3*subs(f,vars(1),(a+2*b)/3))/8;

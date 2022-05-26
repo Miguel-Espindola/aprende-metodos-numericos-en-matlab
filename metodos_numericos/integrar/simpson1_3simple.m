@@ -1,8 +1,9 @@
 function Resultados=simpson1_3simple(a,b,f)
 
-% esta funcion calcula la integral de una funcion simbolica usando el
-% metodo de simpson 1/3 toma como entrada un intervalo de a,b y una funcion
+% esta función calcula la integral de una función simbólica usando el
+% método de Simpson 1/3 toma como entrada un intervalo de a,b y una función
 % a integrar
+
 vars = symvar(f);
 m=(a+b)/2;
 I=(b-a)*double(subs(f,vars(1),a)+subs(f,vars(1),b)+4*subs(f,vars(1),m))/6;

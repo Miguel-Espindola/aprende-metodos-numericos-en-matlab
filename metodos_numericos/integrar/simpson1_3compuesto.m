@@ -1,8 +1,9 @@
 function Resultados=simpson1_3compuesto(a,b,f,n)
-% esta funcion calcula la integral de una funcion simbolica en un intervalo
-% a b con n numero de subintervalos, la salida es una matriz de nx3 donde
-% la primer columna es la iteracion, la segunda el valor calculado y la
+% esta función calcula la integral de una función simbólica en un intervalo
+% a b con n número de subintervalos, la salida es una matriz de nx3 donde
+% la primera columna es la interacción, la segunda el valor calculado y la
 % tercera el error obtenido
+
 %Cálculo
 i=1;
 valm=zeros(n+1,1);

@@ -1,7 +1,8 @@
 function Resultados=puntomediocompuesto(a,b,f,n)
-% esta funcion calcula la integral mediante el metodo del punto medio
-% compuesto, toma como entrada un valor inicial, uno final, una funcion
-% simbolica y un numero de subintervalos, devuelve una matriz de tamaño nx3
+% esta función calcula la integral mediante el método del punto medio
+% compuesto, toma como entrada un valor inicial, uno final, una función
+% simbólica y un numero de subintervalos, devuelve una matriz de tamaño nx3
+
 
 sol1=double(int(f,a,b));
 m = 0;

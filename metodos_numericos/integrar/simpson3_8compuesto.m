@@ -1,9 +1,10 @@
 function Resultados=simpson3_8compuesto(a,b,f,n)
 
-% esta funcion calcula la integral de una funcion en un intervalo dado con
-% un n numero de subintervalos usando el metodo de simpson3/8 la salida es
-% una matriz de 3xn donde la primer columna es la iteracion, la segunda el
-% valor obtenido y la tercera el error obtenido en esa iteracion
+% esta función calcula la integral de una función en un intervalo dado con
+% un n número de subintervalos usando el método de simpson3/8 la salida es
+% una matriz de 3xn donde la primera columna es la interacción, la segunda el
+% valor obtenido y la tercera el error obtenido en esa interacción
+
 
 
 %Solución real en el intervalo dado
