@@ -11,7 +11,7 @@ function Resultados=puntomediosimple(a,b,f)
     %derivadamaxima = [];
 
     for i =1:c
-        derivadaevaluada=abs(double(subs(derivada,y(i))));
+        derivadaevaluada=abs(double(subs(derivada,y(i))))
         if derivadaevaluada >=  derivadamaxima
             derivadamaxima=derivadaevaluada;
         end
